@@ -1,0 +1,679 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<style>
+    body{
+        background: rgb(233,228,248);
+        background: linear-gradient(180deg, rgba(233,228,248,1) 0%, rgba(215,242,242,1) 100%);
+    }
+    *{
+        color: #4e556d;
+    }
+    p.titu{
+        color: #6d51dc;
+        font-weight: bold;
+        font-size: 40px;
+    }
+    p.docs{
+        color: #6d51dc;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    p.blank{
+        color: white;
+        
+    }
+    footer{
+        background-color: #01dfbd;
+        
+    }
+    .centrar1{
+        width: 100%;
+        margin: 0px auto;
+        display: flex;
+        justify-content: center;
+        background-image: url("images/musa.png");
+        height: 100px;
+        padding-top: 50px;
+        
+    }
+
+    nav{
+        background: rgb(187,168,195);
+        background: linear-gradient(90deg, rgba(187,168,195,0.9009978991596639) 0%, rgba(187,168,195,0.8981967787114846) 100%);
+        width: 100%;
+        height: 80px;
+    }
+    nav ul li{
+        color: #412b75;
+        float: right;
+        margin: 20px;
+
+    }
+    #scroll {
+        margin: 4px, 4px;
+        padding: 4px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    .centrar{
+        width: 100%;
+        margin: 0px auto;
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    #inicio{
+        background-image: url("images/set-virtual.png");
+        width: 100%;
+        height: auto;
+        
+    }
+    #ini1{
+        width: auto;
+        height: 430px;
+        padding-left: 100px;
+        padding-top: 100px;
+        background: rgb(55,26,175);
+background: linear-gradient(180deg, rgba(55,26,175,0.49763655462184875) 0%, rgba(55,26,175,0.5) 100%);
+    }
+    #logo{
+        float: left;
+        width: 20%;
+        bottom: 0px;
+    }
+    #menu{
+        float: left;
+        width: 60%;
+    }
+    #botonesini{
+        float: right;
+        width: 20%;
+        height: 80px;
+        bottom: 0px;
+    }
+    .separar{
+        clear: both;
+    }
+    #num2{
+        width: 100%;
+        height: 607px;
+    }
+    #descrip{
+        width: 50%;
+        height: 607px;
+        float: left;
+        bottom: 0px;
+        background-repeat: no-repeat;
+    }
+    #pastillas{
+        background-image: url("images/Pastillas.png");
+        width: 50%;
+        height: 607px;
+        float: right;
+        background-repeat: no-repeat;
+    }
+    #descripciones{
+        height: 200px;
+        width: 280px;
+        
+        
+    }
+    #speakers{ 
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7021183473389356) 100%);
+        width: 300px;
+        height: 350px;
+        color: #4e556d;
+        padding: 15px 32px;
+        border-radius: 20px;
+        float: left;  
+    }
+    .botonn1 {
+        background: rgb(187,168,195);
+        background: linear-gradient(90deg, rgba(187,168,195,0) 0%, rgba(65,43,117,0) 100%);
+        font-size: 15px;
+        color: #6d51dc;
+        padding: 10px 10px;
+        border: 1px solid #6d51dc;
+        border-radius: 12px;
+    }
+    .boton1 {
+        background: rgb(187,168,195);
+        background: linear-gradient(90deg, rgba(187,168,195,0) 0%, rgba(65,43,117,0) 100%);
+        color: #412b75;
+        padding: 15px 32px;
+        border: 2px solid #412b75;
+        border-radius: 5px;
+
+    
+}
+    .boton2 {
+            background: #412b75;
+            color: white;
+            padding: 15px 32px;
+            border: 2px solid #412b75;
+            border-radius: 5px;
+        
+    }
+    .boton3 {
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7021183473389356) 100%);
+        color: #4e556d;
+        padding: 15px 32px;
+        border-radius: 12px;    
+    }
+    .boton4 {
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(8,225,190,1) 100%);
+        color: #4e556d;
+        border-radius: 12px;    
+    }
+    .boton5 {
+        color: #4e556d;
+        border-radius: 12px;    
+    }
+    .botondoc1 {
+        background-image: url("images/En vivo 1.png");
+        background-repeat: no-repeat;
+        width: 451px;
+        height: 751px;
+        color: #4e556d;
+        border-radius: 12px; 
+        float: left;   
+        
+    }
+    .botondoc2 {
+        background-image: url("images/En vivo 2.png");
+        background-repeat: no-repeat;
+        color: #4e556d;
+        width: 451px;
+        height: 751px;
+        border-radius: 12px; 
+        float: left;     
+    }
+    .botondoc3 {
+        background-image: url("images/En vivo 3.png");
+        color: #4e556d;
+        width: 451px;
+        height: 751px;
+        border-radius: 12px;
+        float: left;      
+    }
+    .botondoc4 {
+        background-image: url("images/En vivo 4.png");
+        color: #4e556d;
+        width: 451px;
+        height: 751px;
+        border-radius: 12px; 
+        float: left; 
+            
+    }
+    .botonper1 {
+        background-image: url("images/Rectangle\ 18-1.png");
+        color: #4e556d;
+        width: 266px;
+        height: 209px;
+        border-radius: 12px; 
+        float: left;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .botonper2 {
+        background-image: url("images/Rectangle\ 18-2.png");
+        color: #4e556d;
+        width: 266px;
+        height: 209px;
+        border-radius: 12px; 
+        float: left;  
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .botonper3 {
+        background-image: url("images/Rectangle\ 18-3.png");
+        color: #4e556d;
+        width: 266px;
+        height: 209px;
+        border-radius: 12px; 
+        float: left;  
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .botonper4 {
+        background-image: url("images/Rectangle\ 18.png");
+        color: #4e556d;
+        width: 266px;
+        height: 209px;
+        border-radius: 12px; 
+        float: left;  
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #scrolldoc{
+        width: auto;
+        height: auto;
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(8,225,190,1) 100%);
+        border-radius: 12px;
+    }
+    #textodoc{
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 316px;
+        border-radius: 12px; 
+    }
+    #espa{
+        padding-left: 20px;
+        padding-top: 50;
+        height: 380px;
+        border-radius: 12px; 
+    }
+
+    #d166{
+        height: 121px;
+    }
+    #d133{
+        background: #27326b;
+        height: 80px;
+        width: 232px;
+        padding-left: 30px;
+        padding-top: 2px;
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+    #d134{
+        background: #08e1be;
+        height: 80px;
+        width: 232px;
+        padding-left: 30px;
+        padding-top: 2px;
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+    #separar{
+        height: 200px;
+    }
+    #redon{
+        border-radius: 100px;
+        border: 4px solid #6d51dc;
+    }
+
+</style>
+</head>
+
+<body>
+    <div id="inicio">
+        <nav>
+            <div id="logo">
+                <img src="images/LOGO.png">
+            </div>
+            <div id="menu">
+                <ul>
+                    <li>
+                        Foro
+                    </li>
+                    <li>
+                        Eventos
+                    </li>
+                    <li>
+                        Speakers
+                    </li>
+                    <li>
+                        Agenda
+                    </li>
+                </ul>
+                
+            </div>
+            <div id="botonesini">
+                <button class="boton1">Iniciar Sesion</button>
+                <button class="boton2">Registrarse</button>
+            </div>
+        </nav>
+
+        <div id="ini1">
+            <img src="images/Foro Musa.png">
+        </div>
+        
+    </div>
+
+    <div id="num2">
+        <div id="descrip">
+            <table>
+                <tr> <p class="titu"> Descripcion del Programa</p></tr>
+                
+                <tr><img src="images/medicinas_lila 1.png"></tr>
+            </table>
+        </div>
+        <div id="pastillas">
+            <table>
+                <tr>
+                    <td><button class="boton3">
+                        <div id="descripciones">
+                            <p class="titu">Virtual</p>
+                            <p>Viva la experiencia de compartir en vivo con speakers internacionales en un set virtual en 3D</p>
+                            </div>
+                    </button>
+                    </td>>
+                    <td>
+                        <button class="boton3">
+                            <div id="descripciones">
+                                <p class="titu">Aval Academico</p>
+                                <p>Viva la experiencia de compartir en vivo con speakers internacionales en un set virtual en 3D</p>
+                                </div>
+                        </button>
+                    </td>>
+                </tr>
+                <tr>
+                    <td><button class="boton3">
+                        <div id="descripciones">
+                            <p class="titu">Certificaciones</p>
+                            <p>Viva la experiencia de compartir en vivo con speakers internacionales en un set virtual en 3D</p>
+                            </div>
+                    </button>
+                    </td>>
+                    <td><button class="boton3">
+                        <div id="descripciones">
+                            <p class="titu">Multidispositivo</p>
+                            <p>Viva la experiencia de compartir en vivo con speakers internacionales en un set virtual en 3D</p>
+                            </div>
+                    </button>
+                    </td>>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="ini3">
+        <p class="titu">Ponencias en Vivo</p>
+        <p>Actualizacion medica en vivo con escenarios virtuales</p>
+    </div>
+    
+    <div id="scroll">
+        <table>
+            <tr>
+                <td>
+                    <div class="botondoc1">
+                        <div id="scrolldoc">
+                            <div id="espa">
+                                <p class="docs">Ponencia Medicina<br>Reproductiva</p>
+                            </div>
+                            <div id="textodoc">
+                                <p class="docs">Anticoncepcion a la carta: Beneficios<br> Adicionales de los ACO y diferenciar el <br>uso de los AC deacuerdo al perfil de la<br> usuaria</p>
+                                <p>Doctor Santiago Palacios <img src="images/Bandera Chile.png" width="30" height="30"></p>
+                                <p>Medico Especialista en Obstetricia y Ginecologia</p>
+                                <p>Jueves 20 de Mayo</p>
+                                <button class="boton2">Mas informacion</button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="botondoc2">
+                        <div id="scrolldoc" >
+                            <div id="espa">
+                                <p class="docs">Ponencia Medicina<br>Reproductiva</p>
+                            </div>
+                            <div id="textodoc">
+                                <p class="docs">Anticoncepcion a la carta: Beneficios<br> Adicionales de los ACO y diferenciar el <br>uso de los AC deacuerdo al perfil de la<br> usuaria</p>
+                                <p>Doctor Santiago Palacios <img src="images/Bandera Argentina.png" width="30" height="30"></p>
+                                <p>Medico Especialista en Obstetricia y Ginecologia</p>
+                                <p>Jueves 20 de Mayo</p>
+                                <button class="boton2">Mas informacion</button>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="botondoc3">
+                        <div id="scrolldoc" >
+                            <div id="espa">
+                                <p class="docs">Ponencia Medicina<br>Reproductiva</p>
+                            </div>
+                            <div id="textodoc">
+                                <p class="docs">Anticoncepcion a la carta: Beneficios<br> Adicionales de los ACO y diferenciar el <br>uso de los AC deacuerdo al perfil de la<br> usuaria</p>
+                                <p>Doctor Santiago Palacios <img src="images/Bandera Ecuador.png" width="30" height="30"></p>
+                                <p>Medico Especialista en Obstetricia y Ginecologia</p>
+                                <p>Jueves 20 de Mayo</p>
+                                <button class="boton2">Mas informacion</button>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="botondoc4">
+                        <div id="scrolldoc" >
+                            <div id="espa">
+                                <p class="docs">Ponencia Medicina<br>Reproductiva</p>
+                            </div>
+                            <div id="textodoc">
+                                <p class="docs">Anticoncepcion a la carta: Beneficios<br> Adicionales de los ACO y diferenciar el <br>uso de los AC deacuerdo al perfil de la<br> usuaria</p>
+                                <p>Doctor Santiago Palacios <img src="images/Bandera Chile.png" width="30" height="30"></p>
+                                <p>Medico Especialista en Obstetricia y Ginecologia</p>
+                                <p>Jueves 20 de Mayo</p>
+                                <button class="boton2">Mas informacion</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </td>
+
+            </tr>
+        </table>
+    
+    </div>
+    
+
+    </div>
+    <div>
+        <p class="titu"> Eventos a la carta</p>
+        <p>Lanzamientos semanales de experiencias medicas con expertos en ginecologia disponibles todo el tiempo</p>
+    </div>
+    
+    <div class="centrar">
+        <div class="botonper3">
+            <div id="d166">
+            </div>
+            <div id="d133">
+                <p class="blank">Gestion de pildoras<br>anticonceptivas OTC: el<br>papel del ginecologo</p>
+            </div>
+        </div>
+        <div class="botonper1">
+            <div id="d166">
+            </div>
+            <div id="d133">
+                <p class="blank">Gestion de pildoras<br>anticonceptivas OTC: el<br>papel del ginecologo</p>
+            </div>
+        </div>
+        <div class="botonper2">
+            <div id="d166">
+            </div>
+            <div id="d134">
+                <p class="blank">Gestion de pildoras<br>anticonceptivas OTC: el<br>papel del ginecologo</p>
+            </div>
+        </div>
+        <div class="botonper4">
+            <div id="d166">
+            </div>
+            <div id="d134">
+                <p class="blank">Gestion de pildoras<br>anticonceptivas OTC: el<br>papel del ginecologo</p>
+            </div>
+        </div>
+    </div>
+    <div id="separar"></div>
+    <div>
+        <p class="titu">Speakers</p>
+        <p>Latinoamerica - Espana - EEUU</p>
+    </div>
+    <div class="centrar">
+        <table>
+            
+            <tr>
+                <td>
+                    <div id="speakers">
+                        <div class="centrar">
+                            <img id="redon" src="images/Dr 1.jpeg">
+                        </div>
+                        <div>
+                            <p class="docs">Dr. Jose Luis Neyro    <img src="images/Bandera Ecuador.png" width="30" height="30"></p>
+                            <p>Medico Especialista en<br>Obtetricia y Ginecologia</p>
+                        </div>
+                        <button class="botonn1">Mas informacion</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="speakers">
+                        <div class="centrar">
+                            <img id="redon" src="images/Dr 11.jpeg">
+                        </div>
+                        <div>
+                            <p class="docs">Dr. Jose Luis Neyro    <img src="images/Bandera Chile.png" width="30" height="30"></p>
+                            <p>Medico Especialista en<br>Obtetricia y Ginecologia</p>
+                        </div>
+                        <button class="botonn1">Mas informacion</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="speakers">
+                        <div class="centrar">
+                            <img id="redon" src="images/La Mañana, 02.04 1.jpg" width="163" height="167">
+                        </div>
+                        <div>
+                            <p class="docs">Dr. Jose Luis Neyro    <img src="images/Bandera Argentina.png" width="30" height="30"></p>
+                            <p>Medico Especialista en<br>Obtetricia y Ginecologia</p>
+                        </div>
+                        <button class="botonn1">Mas informacion</button>
+                    </div>
+                </td>
+            </tr><tr>
+                <td>
+                    <div id="speakers">
+                        <div class="centrar">
+                            <img id="redon" src="images/La Mañana, 02.04 1 (3).jpg" width="163" height="167">
+                        </div>
+                        <div>
+                            <p class="docs">Dr. Jose Luis Neyro    <img src="images/Bandera Argentina.png" width="30" height="30"></p>
+                            <p>Medico Especialista en<br>Obtetricia y Ginecologia</p>
+                        </div>
+                        <button class="botonn1">Mas informacion</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="speakers">
+                        <div class="centrar">
+                            <img id="redon" src="images/La Mañana, 02.04 1 (2).jpg" width="163" height="167">
+                        </div>
+                        <div>
+                            <p class="docs">Dr. Jose Luis Neyro    <img src="images/Bandera Ecuador.png" width="30" height="30"></p>
+                            <p>Medico Especialista en<br>Obtetricia y Ginecologia</p>
+                        </div>
+                        <button class="botonn1">Mas informacion</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="speakers">
+                        <div class="centrar">
+                            <img id="redon" src="images/La Mañana, 02.04 1 (1).jpg"width="163" height="167">
+                        </div>
+                        <div>
+                            <p class="docs">Dr. Jose Luis Neyro    <img src="images/Bandera Ecuador.png" width="30" height="30"></p>
+                            <p>Medico Especialista en<br>Obtetricia y Ginecologia</p>
+                        </div>
+                        <button class="botonn1">Mas informacion</button>
+                    </div>
+                </td>
+            </tr><tr>
+                <td>
+                    <div id="speakers">
+                        <div class="centrar">
+                            <img id="redon" src="images/Dr. Michael_F 1.jpg">
+                        </div>
+                        <div>
+                            <p class="docs">Dr. Jose Luis Neyro    <img src="images/Bandera Argentina.png" width="30" height="30"></p>
+                            <p>Medico Especialista en<br>Obtetricia y Ginecologia</p>
+                        </div>
+                        <button class="botonn1">Mas informacion</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="speakers">
+                        <div class="centrar">
+                            <img id="redon" src="images/Dr. Michael_F 1 (3).jpg">
+                        </div>
+                        <div>
+                            <p class="docs">Dr. Jose Luis Neyro    <img src="images/Bandera Chile.png" width="30" height="30"></p>
+                            <p>Medico Especialista en<br>Obtetricia y Ginecologia</p>
+                        </div>
+                        <button class="botonn1">Mas informacion</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="speakers">
+                        <div class="centrar">
+                            <img id="redon" src="images/Dr. Michael_F 1 (2).jpg">
+                        </div>
+                        <div>
+                            <p class="docs">Dr. Jose Luis Neyro    <img src="images/Bandera Chile.png" width="30" height="30"></p>
+                            <p>Medico Especialista en<br>Obtetricia y Ginecologia</p>
+                        </div>
+                        <button class="botonn1">Mas informacion</button>
+                    </div>
+                </td>
+            </tr><tr>
+                <td>
+                    <div id="speakers">
+                        <div class="centrar">
+                            <img id="redon" src="images/Dr. Michael_F 1 (1).jpg">
+                        </div>
+                        <div>
+                            <p class="docs">Dr. Jose Luis Neyro    <img src="images/Bandera Argentina.png" width="30" height="30"></p>
+                            <p>Medico Especialista en<br>Obtetricia y Ginecologia</p>
+                        </div>
+                        <button class="botonn1">Mas informacion</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="speakers">
+                        <div class="centrar">
+                            <img id="redon" src="images/Dr 13.jpeg">
+                        </div>
+                        <div>
+                            <p class="docs">Dr. Jose Luis Neyro    <img src="images/Bandera Ecuador.png" width="30" height="30"></p>
+                            <p>Medico Especialista en<br>Obtetricia y Ginecologia</p>
+                        </div>
+                        <button class="botonn1">Mas informacion</button>
+                    </div>
+                </td>
+                <td>
+                    <div id="speakers">
+                        <div class="centrar">
+                            <img id="redon" src="images/Dr 12.jpeg">
+                        </div>
+                        <div>
+                            <p class="docs">Dr. Jose Luis Neyro    <img src="images/Bandera Chile.png" width="30" height="30"></p>
+                            <p>Medico Especialista en<br>Obtetricia y Ginecologia</p>
+                        </div>
+                        <button class="botonn1">Mas informacion</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <div class="centrar1">
+            <img src="images/LOGO.png" height="69" >
+        </div>
+    </footer>
+</body>
+
+
+</html>
